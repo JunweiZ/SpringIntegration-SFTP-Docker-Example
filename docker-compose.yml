@@ -1,0 +1,33 @@
+version: '3'
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+
+  springapp:
+    container_name: "springapp"
+    hostname: localhost
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+    networks:
+      - backend
+
+  sftp:
+    image: writl/sftp
+    container_name: "sftp"
+    restart: always
+    expose:
+      - 22
+    ports:
+      - "2222:22"
+    volumes:
+      - /home/perkele/Desktop/test/ftp:/data/incoming
+    networks:
+      - backend
