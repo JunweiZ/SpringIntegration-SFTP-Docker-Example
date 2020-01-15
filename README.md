@@ -13,7 +13,7 @@ Example of usage Spring Integration with dockerized sftp server.
 - Launch ```bldAll.sh``` script
 
 To connect to SFTP server [docker container], You should get IP address of Your SFTP container.
-To do this, run ```getDockerContainerIPAddresses.sh``` script, from ```arc/main/resources/scripts``` 
+To do this, run ```getDockerContainerIPAddresses.sh``` script, from ```src/main/resources/scripts``` 
 folder.
 
 
