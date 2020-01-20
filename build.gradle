@@ -37,8 +37,7 @@ apply plugin: "com.palantir.docker-run"
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
-//	implementation 'org.springframework.boot:spring-boot-starter-integration:'
-	implementation 'org.springframework.integration:spring-integration-sftp:5.1.7.RELEASE'
+	implementation 'org.springframework.integration:spring-integration-sftp'
 
 	implementation 'commons-io:commons-io:2.6'
 

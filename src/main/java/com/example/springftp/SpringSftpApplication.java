@@ -8,10 +8,10 @@ import org.springframework.integration.config.EnableIntegration;
 @SpringBootApplication
 @IntegrationComponentScan
 @EnableIntegration
-public class SpringftpApplication {
+public class SpringSftpApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringftpApplication.class, args);
+		SpringApplication.run(SpringSftpApplication.class, args);
 	}
 
 }

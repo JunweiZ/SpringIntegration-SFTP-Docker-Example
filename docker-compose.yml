@@ -12,10 +12,12 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    volumes:
+      - ./uploads/springapp:/opt/uploads/
     ports:
       - "8080:8080"
     expose:
-      - 8080
+      - "8080"
     networks:
       - backend
 
@@ -24,10 +26,10 @@ services:
     container_name: "sftp"
     restart: always
     expose:
-      - 22
+      - "22"
     ports:
       - "2222:22"
     volumes:
-      - /home/perkele/Desktop/test/ftp:/data/incoming
+      - ./uploads/ftp:/data/uploads
     networks:
       - backend
